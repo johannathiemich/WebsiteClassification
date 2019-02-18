@@ -1,0 +1,3 @@
+"Anne"	"Hello world"
+"Lukas"	"Dog Bear Horse"
+"Lisa"	"Ocean Beach Sun"
