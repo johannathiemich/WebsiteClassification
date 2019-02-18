@@ -3,6 +3,6 @@ from pandas import read_pickle
 import fasttext
 import pickle
 
-df = read_pickle('data.pkl')
+df = read_pickle('files/data.pkl')
 
 model = fasttext.skipgram('test.txt', 'model')
