@@ -3,6 +3,10 @@
 from pandas import DataFrame
 from json import load, loads
 from pandas import read_pickle
+#from textblob import TextBlob
+from langdetect import DetectorFactory
+DetectorFactory.seed = 0
+from langdetect import detect
 import numpy as np
 import nltk
 from sklearn.model_selection import train_test_split
@@ -36,25 +40,36 @@ print(df.head)
 #JT:
 #removing rows with empty text
 df = df[df['Text'] != ""]
+size_before = df.count
+
 #df = df[:5]
 #removing stopwords
 stop_words = set(stopwords.words('english'))
 for index, row in df.iterrows():
-    word_tokens = word_tokenize(row['Text'])
-    filtered_sentence = [w for w in word_tokens if not w in stop_words]
+    #wanted to use TextBlob but it won't work (HTTP request error)
+    #b = TextBlob(row['Text'])
+    try:
+        lang = detect(row['Text'])
+    except:
+        #No language could be detected --> delete row
+        lang = ''
+        df.drop(df.index[index], inplace = True)
+        index = index - 1
+    #making sure to only take the english websites
+    if lang == 'en':
+        word_tokens = word_tokenize(row['Text'])
+        filtered_sentence = [w for w in word_tokens if not w in stop_words]
+        row['Text'] = filtered_sentence
+        filtered_sentence = []
 
-    filtered_sentence = []
+#    for w in word_tokens:
+#        if w not in stop_words:
+#            filtered_sentence.append(w)
 
-    for w in word_tokens:
-        if w not in stop_words:
-            filtered_sentence.append(w)
-
-    #for testing only
-    #print(word_tokens)
-    #print(filtered_sentence)
-
-
-#still need to correct this: save the filtered sentence, not the original df
+size_after = df.count
+print("size before: ", size_before)
+print("size after: ", size_after)
+#print(df["Text"])
 df.to_pickle(pkl_path_cleaned)
 train, test = train_test_split(df, test_size=0.3)
 train.to_pickle(pkl_path_train)
