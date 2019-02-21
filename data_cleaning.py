@@ -1,13 +1,11 @@
 #this script only needs to be run once in the beginning to create the .pkl files
 
-from pandas import DataFrame
+from pandas import DataFrame, read_csv
 from json import load, loads
-from pandas import read_pickle
 #from textblob import TextBlob
 from langdetect import DetectorFactory
 DetectorFactory.seed = 0
 from langdetect import detect
-import numpy as np
 import nltk
 from sklearn.model_selection import train_test_split
 
@@ -19,10 +17,10 @@ from nltk.tokenize import word_tokenize
 
 data = []
 json_path = 'files/scrapedsites.json'
-pkl_path = 'files/data.pkl'
-pkl_path_cleaned = 'files/data_cleaned.pkl'
-pkl_path_train = 'files/data_cleaned_train.pkl'
-pkl_path_test = 'files/data_cleaned_test.pkl'
+csv_path = 'files/data.txt'
+csv_path_cleaned = 'files/data_cleaned.txt'
+csv_path_train = 'files/data_cleaned_train.txt'
+csv_path_test = 'files/data_cleaned_test.txt'
 
 #AJ:
 with open(json_path) as f:
@@ -30,21 +28,20 @@ with open(json_path) as f:
         d = loads(line)
         data.append(d)
     dataFrame = DataFrame(data)
-    dataFrame.to_pickle(pkl_path)
-    #not working:
-    #np.savetxt(r'C:\Users\johan\OneDrive\Dokumente\Auslandssemester USA\Kurse\Machine Learning\project\WebsiteClassification\np.txt', dataFrame.values, fmt='%d')
+    dataFrame[['Category', 'Text']].to_csv(csv_path, sep='\t', index=False, header=False)
 
-df = read_pickle(pkl_path)
-print("printing head:")
-print(df.head)
+df = read_csv(csv_path, header = None, names = ['Category', 'Text'], sep ='\t')
+
 #JT:
 #removing rows with empty text
 df = df[df['Text'] != ""]
-size_before = df.count
+size_before = df.count()[0]
 
-#df = df[:5]
+#df = df[:10]
 #removing stopwords
 stop_words = set(stopwords.words('english'))
+delete_indices = []
+
 for index, row in df.iterrows():
     #wanted to use TextBlob but it won't work (HTTP request error)
     #b = TextBlob(row['Text'])
@@ -53,8 +50,7 @@ for index, row in df.iterrows():
     except:
         #No language could be detected --> delete row
         lang = ''
-        df.drop(df.index[index], inplace = True)
-        index = index - 1
+        delete_indices.append(index)
     #making sure to only take the english websites
     if lang == 'en':
         word_tokens = word_tokenize(row['Text'])
@@ -62,15 +58,15 @@ for index, row in df.iterrows():
         row['Text'] = filtered_sentence
         filtered_sentence = []
 
-#    for w in word_tokens:
-#        if w not in stop_words:
-#            filtered_sentence.append(w)
+if len(delete_indices) > 0:
+    delete_indices_upd = [i for i in delete_indices if i < df.count()[0]]
+    df.drop(df.index[delete_indices_upd], inplace = True)
 
-size_after = df.count
+size_after = df.count()[0]
 print("size before: ", size_before)
 print("size after: ", size_after)
-#print(df["Text"])
-df.to_pickle(pkl_path_cleaned)
+
+df.to_csv(csv_path_cleaned, sep='\t', index=False, header=False)
 train, test = train_test_split(df, test_size=0.3)
-train.to_pickle(pkl_path_train)
-test.to_pickle(pkl_path_test)
+train.to_csv(csv_path_train, sep='\t', index=False, header=False)
+test.to_csv(csv_path_test, sep='\t', index=False, header=False)
