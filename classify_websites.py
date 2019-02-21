@@ -8,7 +8,7 @@ df = read_pickle('files/data_cleaned_train.pkl')
 model = fasttext.skipgram('test.txt', 'model')
 
 
-df[['Category', 'Text']].to_csv('data.txt', sep='\t', index=False, header=False)
+df[['Category', 'Text']].to_csv('data.txt', sep='\t', index=False, header=True)
 
 model = fasttext.skipgram('data.txt', 'model')
 

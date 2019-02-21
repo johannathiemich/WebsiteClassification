@@ -24,6 +24,10 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+*.txt
+*.pkl
+*.bin
+*.vec
 MANIFEST
 
 # PyInstaller
