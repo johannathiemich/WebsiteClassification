@@ -30,9 +30,9 @@ with open(json_path) as f:
         data.append(d)
 
     dataFrame = DataFrame(data)
+    #dataFrame = dataFrame[:10]
     for index, row in dataFrame.iterrows():
         dataFrame['Category'] = '__label__' + dataFrame['Category']
-        print("modifying label")
     dataFrame[['Category', 'Text']].to_csv(csv_path, sep=' ', index=False, header=False)
 
 df = read_csv(csv_path, header = None, names = ['Category', 'Text'], sep =' ')
@@ -76,7 +76,7 @@ size_after = df.count()[0]
 print("size before: ", size_before)
 print("size after: ", size_after)
 
-df.to_csv(csv_path_cleaned, header = None, names = ['Category', 'Text'], sep =' ')
+df.to_csv(csv_path_cleaned, header = None, sep =' ')
 train, test = train_test_split(df, test_size=0.3)
-train.to_csv(csv_path_train, header = None, names = ['Category', 'Text'], sep =' ')
-test.to_csv(csv_path_test, header = None, names = ['Category', 'Text'], sep =' ')
+train.to_csv(csv_path_train, header = None, sep =' ')
+test.to_csv(csv_path_test, header = None, sep =' ')
