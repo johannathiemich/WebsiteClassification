@@ -80,3 +80,29 @@ def normalize(words):
     words = replace_numbers(words)
     words = remove_stopwords(words)
     return words
+
+#Johanna: tried to speed up the normalization
+def normalize_opt(words):
+    words = word_tokenize(words)
+    new_words = []
+    p = inflect.engine()
+
+    for word in words:
+        print("processing next word")
+        new_word = unicodedata.normalize('NFKD', word).encode('ascii', 'ignore').decode('utf-8', 'ignore')
+        new_word = new_word.lower()
+        new_word = re.sub(r'[^\w\s]', '', word)
+        if new_word != '':
+            if word.isdigit():
+                new_word = p.number_to_words(new_word)
+            if new_word not in stopwords.words('english'):
+                new_words.append(new_word)
+                print("appended")
+    return new_words
+
+
+
+
+
+
+
