@@ -88,16 +88,16 @@ def normalize_opt(words):
     p = inflect.engine()
 
     for word in words:
-        print("processing next word")
+        #print("processing next word")
         new_word = unicodedata.normalize('NFKD', word).encode('ascii', 'ignore').decode('utf-8', 'ignore')
         new_word = new_word.lower()
-        new_word = re.sub(r'[^\w\s]', '', word)
+        new_word = re.sub(r'[^\w\s]', '', new_word)
         if new_word != '':
             if word.isdigit():
                 new_word = p.number_to_words(new_word)
             if new_word not in stopwords.words('english'):
                 new_words.append(new_word)
-                print("appended")
+                #print("appended")
     return new_words
 
 
