@@ -1,7 +1,7 @@
 #this file will contain training the model and testing its results
 from pandas import read_pickle
 import fasttext
-import numpy as  np
+import numpy as np
 
 
 csv_path_train = 'files/data_cleaned_train.txt'
@@ -46,10 +46,10 @@ model.cosine_similarity(food, travel)
 site2vec = model[texts[0]]
 
 # Getting site2vec embeddings of out of sample sites
-a2 = model[a]
-b2 = model[b]
+sports_embedding = model[sports]
+sports_embedding2 = model[sports2]
 
 # Manually Calculating Cosine Similarity
-cosinesim = dist = np.dot(a2, b2) / (np.linalg.norm(a2) * np.linalg.norm(b2))
-modelcosine = model.cosine_similarity(a, b)
+cosinesim = dist = np.dot(sports_embedding, sports_embedding2) / (np.linalg.norm(sports_embedding) * np.linalg.norm(sports_embedding2))
+modelcosine = model.cosine_similarity(sports, sports2)
 print(cosinesim, modelcosine)
