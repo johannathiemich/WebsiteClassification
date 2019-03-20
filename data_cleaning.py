@@ -23,6 +23,7 @@ csv_path = 'files/data.txt'
 csv_path_cleaned = 'files/data_cleaned.txt'
 csv_path_train = 'files/data_cleaned_train.txt'
 csv_path_test = 'files/data_cleaned_test.txt'
+csv_csv_path_cleaned = 'files/data_cleaned.csv'
 
 #AJ:
 with open(json_path) as f:
@@ -90,6 +91,7 @@ print("size after: ", size_after)
 
 #df.to_csv(csv_path_cleaned, header = None, sep =' ')
 df[['Category', 'clean_text']].to_csv(csv_path_cleaned, sep=' ', index=False, header=False)
+df[['Category', 'clean_text']].to_csv(csv_csv_path_cleaned, sep = '\tab', index=False, header=False)
 
 train, test = train_test_split(df, test_size=0.3)
 train[['Category', 'clean_text']].to_csv(csv_path_train, sep=' ', index=False, header=False)

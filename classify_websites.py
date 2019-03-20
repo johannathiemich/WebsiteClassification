@@ -12,8 +12,8 @@ model_clf_path = 'files/model_clf'
 #model = fasttext.skipgram(csv_path_train, model_path)
 #classifier = fasttext.supervised(csv_path_train, model_clf_path)
 
-classifier = fasttext.load_model('files/model_clf.bin')
-model = fasttext.load_model('files/model.bin')
+classifier = fasttext.load_model('./files/model_clf.bin')
+model = fasttext.load_model('./files/model.bin')
 print(model.words) # list of words in dictionary
 print(model['cooking'])
 
