@@ -1,3 +1,4 @@
+#By Johanna Thiemich and Alejandro Robles
 #this script only needs to be run once in the beginning to create the .pkl files
 
 from pandas import DataFrame, read_csv
@@ -32,15 +33,11 @@ with open(json_path) as f:
         data.append(d)
 
     dataFrame = DataFrame(data)
-    #dataFrame = dataFrame[:10]
-    #for index, row in dataFrame.iterrows():
-    #    copydf = dataFrame['Category']
-    #    dataFrame['Category'] = '__label__' + copydf
     dataFrame[['Category', 'Text']].to_csv(csv_path, sep=' ', index=False, header=False)
 
 df = read_csv(csv_path, header = None, names = ['Category', 'Text'], sep =' ')
 
-#JT:
+#Johanna Thiemich:
 #removing rows with empty text
 df = df[df['Text'] != ""]
 size_before = df.count()[0]
@@ -51,9 +48,6 @@ delete_indices = []
 clean_text = [None] * len(df)
 
 for i, text in enumerate(df.Text):
-#for index, row in df.iterrows():
-    #wanted to use TextBlob but it won't work (HTTP request error)
-    #b = TextBlob(row['Text'])
     try:
         lang = detect(text)
     except:
@@ -68,11 +62,6 @@ for i, text in enumerate(df.Text):
             print("row: ", i)
         except:
             delete_indices.append(i)
-
-        #word_tokens = word_tokenize(row['Text'])
-        #filtered_sentence = [w for w in word_tokens if not w in stop_words]
-        #row['Text'] = filtered_sentence
-        #filtered_sentence = []
 
 clean_text_string = [' '.join(text) if text else nan for text in clean_text]
 df['clean_text'] = clean_text_string

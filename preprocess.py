@@ -1,3 +1,6 @@
+#By Alejandro Robles
+#helper script for cleaning data
+
 import re, string, unicodedata
 import nltk
 import inflect
