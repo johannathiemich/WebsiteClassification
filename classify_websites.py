@@ -9,6 +9,7 @@ csv_path_test = 'files/data_cleaned_test.txt'
 model_path = 'files/model'
 model_clf_path = 'files/model_clf'
 
+#uncomment this to actually create the models for the first time
 #model = fasttext.skipgram(csv_path_train, model_path)
 #classifier = fasttext.supervised(csv_path_train, model_clf_path)
 
