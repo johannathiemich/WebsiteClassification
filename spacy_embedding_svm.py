@@ -32,7 +32,10 @@ print("similarity doc1, doc2 ", doc1.similarity(doc2))
 print("similarity doc1, doc3 ", doc1.similarity(doc3))
 
 X_train, X_test, y_train, y_test = train_test_split(sentence_embeddings, y, test_size=0.3, random_state = 42)
-
+print("X_train: ", len(X_train))
+print("X_test: ", len(X_test))
+print("y_train: ", len(y_train))
+print("y_test: ", len(y_test))
 classifier = SGDClassifier(loss = "hinge", penalty="l2", max_iter = 5)
 classifier.fit(X_train ,y_train)
 
@@ -40,4 +43,4 @@ print("prediction: ", classifier.predict([doc1.vector]))
 y_pred = classifier.predict(X_test)
 
 print('accuracy linear model %s' % accuracy_score(y_pred, y_test))
-print("report linear model", classification_report(y_test, y_pred,target_names=classifier.classes_))
+#print("report linear model", classification_report(y_test, y_pred,target_names=classifier.classes_))
