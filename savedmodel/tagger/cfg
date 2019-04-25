@@ -1,0 +1,8 @@
+{
+  "pretrained_dims":300,
+  "pretrained_vectors":"en_core_web_md.vectors",
+  "deprecation_fixes":{
+    "vectors_name":"en_core_web_md.vectors"
+  },
+  "cnn_maxout_pieces":2
+}

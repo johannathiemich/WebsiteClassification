@@ -1,3 +1,6 @@
+#By Alejandro Robles
+#Training an CNN for text classification
+
 import pandas as pd
 import spacy
 from spacy.util import minibatch, compounding
@@ -9,39 +12,12 @@ df = pd.read_csv(csv_path_cleaned, header = None, names = ['Category', 'Text'], 
 X = df['Text']
 y = df['Category']
 nlp = spacy.load('en_core_web_md')
+
 # X = X[:10]
 # docs = list(nlp.pipe(X))
 # sentence_embeddings = [doc.vector for doc in docs]
 
 
-def evaluate(tokenizer, textcat, texts, cats):
-    docs = (tokenizer(text) for text in texts)
-    tp = 0.0  # True positives
-    fp = 1e-8  # False positives
-    fn = 1e-8  # False negatives
-    tn = 0.0  # True negatives
-    for i, doc in enumerate(textcat.pipe(docs)):
-        gold = cats[i]
-        for label, score in doc.cats.items():
-            if label not in gold:
-                continue
-            if label == "NEGATIVE":
-                continue
-            if score >= 0.5 and gold[label] >= 0.5:
-                tp += 1.0
-            elif score >= 0.5 and gold[label] < 0.5:
-                fp += 1.0
-            elif score < 0.5 and gold[label] < 0.5:
-                tn += 1
-            elif score < 0.5 and gold[label] >= 0.5:
-                fn += 1
-    precision = tp / (tp + fp)
-    recall = tp / (tp + fn)
-    if (precision + recall) == 0:
-        f_score = 0.0
-    else:
-        f_score = 2 * (precision * recall) / (precision + recall)
-    return {"textcat_p": precision, "textcat_r": recall, "textcat_f": f_score}
 
 # add the text classifier to the pipeline if it doesn't exist
 # nlp.create_pipe works for built-ins that are registered with spaCy
@@ -91,3 +67,24 @@ with nlp.disable_pipes(*other_pipes):  # only train textcat
         for batch in batches:
             texts, annotations = zip(*batch)
             nlp.update(texts, annotations, sgd=optimizer, drop=0.2, losses=losses)
+
+
+    test_text = X[1]
+    doc = nlp(test_text)
+    print(test_text, doc.cats)
+
+
+def evaluate(tokenizer, textcat, texts, cats):
+    import operator
+    docs = (tokenizer(text) for text in texts)
+    acc = 0
+    for i, doc in enumerate(textcat.pipe(docs)):
+        gold = cats[i]
+        prediction = max(doc.cats.items(), key=operator.itemgetter(1))[0]
+        if gold == prediction:
+            acc += 1
+    return acc / len(texts)
+
+scores = evaluate(nlp.tokenizer, textcat, X, y)
+
+
