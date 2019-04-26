@@ -1,668 +1,668 @@
 Å´transitions⁄#Ö[
   {
-    "name":"S",
     "move":0,
-    "label":"",
-    "clas":0
+    "clas":0,
+    "name":"S",
+    "label":""
   },
   {
-    "name":"D",
     "move":1,
-    "label":"",
-    "clas":1
+    "clas":1,
+    "name":"D",
+    "label":""
   },
   {
+    "move":3,
+    "clas":2,
     "name":"R-pobj",
-    "move":3,
-    "label":"pobj",
-    "clas":2
+    "label":"pobj"
   },
   {
+    "move":3,
+    "clas":3,
     "name":"R-prep",
-    "move":3,
-    "label":"prep",
-    "clas":3
+    "label":"prep"
   },
   {
+    "move":3,
+    "clas":4,
     "name":"R-punct",
-    "move":3,
-    "label":"punct",
-    "clas":4
+    "label":"punct"
   },
   {
+    "move":3,
+    "clas":5,
     "name":"R-advcl",
-    "move":3,
-    "label":"advcl",
-    "clas":5
+    "label":"advcl"
   },
   {
+    "move":3,
+    "clas":6,
     "name":"R-cc",
-    "move":3,
-    "label":"cc",
-    "clas":6
+    "label":"cc"
   },
   {
+    "move":3,
+    "clas":7,
     "name":"R-conj",
-    "move":3,
-    "label":"conj",
-    "clas":7
+    "label":"conj"
   },
   {
+    "move":3,
+    "clas":8,
     "name":"R-dobj",
-    "move":3,
-    "label":"dobj",
-    "clas":8
+    "label":"dobj"
   },
   {
+    "move":3,
+    "clas":9,
     "name":"R-appos",
-    "move":3,
-    "label":"appos",
-    "clas":9
+    "label":"appos"
   },
   {
+    "move":3,
+    "clas":10,
     "name":"R-acl",
-    "move":3,
-    "label":"acl",
-    "clas":10
+    "label":"acl"
   },
   {
+    "move":3,
+    "clas":11,
     "name":"R-case",
-    "move":3,
-    "label":"case",
-    "clas":11
+    "label":"case"
   },
   {
+    "move":3,
+    "clas":12,
     "name":"R-pcomp",
-    "move":3,
-    "label":"pcomp",
-    "clas":12
+    "label":"pcomp"
   },
   {
+    "move":3,
+    "clas":13,
     "name":"R-relcl",
-    "move":3,
-    "label":"relcl",
-    "clas":13
+    "label":"relcl"
   },
   {
+    "move":3,
+    "clas":14,
     "name":"R-agent",
-    "move":3,
-    "label":"agent",
-    "clas":14
+    "label":"agent"
   },
   {
+    "move":3,
+    "clas":15,
     "name":"R-advmod",
-    "move":3,
-    "label":"advmod",
-    "clas":15
+    "label":"advmod"
   },
   {
+    "move":3,
+    "clas":16,
     "name":"R-nsubj",
-    "move":3,
-    "label":"nsubj",
-    "clas":16
+    "label":"nsubj"
   },
   {
+    "move":3,
+    "clas":17,
     "name":"R-nummod",
-    "move":3,
-    "label":"nummod",
-    "clas":17
+    "label":"nummod"
   },
   {
+    "move":3,
+    "clas":18,
     "name":"R-neg",
-    "move":3,
-    "label":"neg",
-    "clas":18
+    "label":"neg"
   },
   {
+    "move":3,
+    "clas":19,
     "name":"R-acomp",
-    "move":3,
-    "label":"acomp",
-    "clas":19
+    "label":"acomp"
   },
   {
+    "move":3,
+    "clas":20,
     "name":"R-ccomp",
-    "move":3,
-    "label":"ccomp",
-    "clas":20
+    "label":"ccomp"
   },
   {
+    "move":3,
+    "clas":21,
     "name":"R-xcomp",
-    "move":3,
-    "label":"xcomp",
-    "clas":21
+    "label":"xcomp"
   },
   {
+    "move":3,
+    "clas":22,
     "name":"R-prt",
-    "move":3,
-    "label":"prt",
-    "clas":22
+    "label":"prt"
   },
   {
+    "move":3,
+    "clas":23,
     "name":"R-intj",
-    "move":3,
-    "label":"intj",
-    "clas":23
+    "label":"intj"
   },
   {
+    "move":3,
+    "clas":24,
     "name":"R-dep",
-    "move":3,
-    "label":"dep",
-    "clas":24
+    "label":"dep"
   },
   {
+    "move":3,
+    "clas":25,
     "name":"R-npadvmod",
-    "move":3,
-    "label":"npadvmod",
-    "clas":25
+    "label":"npadvmod"
   },
   {
+    "move":3,
+    "clas":26,
     "name":"R-attr",
-    "move":3,
-    "label":"attr",
-    "clas":26
+    "label":"attr"
   },
   {
+    "move":3,
+    "clas":27,
     "name":"R-oprd",
-    "move":3,
-    "label":"oprd",
-    "clas":27
+    "label":"oprd"
   },
   {
+    "move":3,
+    "clas":28,
     "name":"R-amod",
-    "move":3,
-    "label":"amod",
-    "clas":28
+    "label":"amod"
   },
   {
+    "move":3,
+    "clas":29,
     "name":"R-relcl||dobj",
-    "move":3,
-    "label":"relcl||dobj",
-    "clas":29
+    "label":"relcl||dobj"
   },
   {
+    "move":3,
+    "clas":30,
     "name":"R-dative",
-    "move":3,
-    "label":"dative",
-    "clas":30
+    "label":"dative"
   },
   {
+    "move":3,
+    "clas":31,
     "name":"R-parataxis",
-    "move":3,
-    "label":"parataxis",
-    "clas":31
+    "label":"parataxis"
   },
   {
+    "move":3,
+    "clas":32,
     "name":"R-prep||nsubj",
-    "move":3,
-    "label":"prep||nsubj",
-    "clas":32
+    "label":"prep||nsubj"
   },
   {
+    "move":3,
+    "clas":33,
     "name":"R-acl||dobj",
-    "move":3,
-    "label":"acl||dobj",
-    "clas":33
+    "label":"acl||dobj"
   },
   {
+    "move":3,
+    "clas":34,
     "name":"R-appos||nsubj",
-    "move":3,
-    "label":"appos||nsubj",
-    "clas":34
+    "label":"appos||nsubj"
   },
   {
+    "move":3,
+    "clas":35,
     "name":"R-prep||dobj",
-    "move":3,
-    "label":"prep||dobj",
-    "clas":35
+    "label":"prep||dobj"
   },
   {
+    "move":3,
+    "clas":36,
     "name":"R-preconj",
-    "move":3,
-    "label":"preconj",
-    "clas":36
+    "label":"preconj"
   },
   {
+    "move":3,
+    "clas":37,
     "name":"R-auxpass",
-    "move":3,
-    "label":"auxpass",
-    "clas":37
+    "label":"auxpass"
   },
   {
+    "move":3,
+    "clas":38,
     "name":"R-nsubjpass",
-    "move":3,
-    "label":"nsubjpass",
-    "clas":38
+    "label":"nsubjpass"
   },
   {
+    "move":3,
+    "clas":39,
     "name":"R-det",
-    "move":3,
-    "label":"det",
-    "clas":39
+    "label":"det"
   },
   {
+    "move":3,
+    "clas":40,
     "name":"R-quantmod",
-    "move":3,
-    "label":"quantmod",
-    "clas":40
+    "label":"quantmod"
   },
   {
+    "move":3,
+    "clas":41,
     "name":"R-nmod",
-    "move":3,
-    "label":"nmod",
-    "clas":41
+    "label":"nmod"
   },
   {
+    "move":3,
+    "clas":42,
     "name":"R-aux",
-    "move":3,
-    "label":"aux",
-    "clas":42
+    "label":"aux"
   },
   {
+    "move":3,
+    "clas":43,
     "name":"R-acl||nsubj",
-    "move":3,
-    "label":"acl||nsubj",
-    "clas":43
+    "label":"acl||nsubj"
   },
   {
+    "move":3,
+    "clas":44,
     "name":"R-relcl||nsubj",
-    "move":3,
-    "label":"relcl||nsubj",
-    "clas":44
+    "label":"relcl||nsubj"
   },
   {
+    "move":3,
+    "clas":45,
     "name":"R-expl",
-    "move":3,
-    "label":"expl",
-    "clas":45
+    "label":"expl"
   },
   {
+    "move":3,
+    "clas":46,
     "name":"R-csubj",
-    "move":3,
-    "label":"csubj",
-    "clas":46
+    "label":"csubj"
   },
   {
+    "move":3,
+    "clas":47,
     "name":"R-dobj||xcomp",
-    "move":3,
-    "label":"dobj||xcomp",
-    "clas":47
+    "label":"dobj||xcomp"
   },
   {
+    "move":3,
+    "clas":48,
     "name":"R-meta",
-    "move":3,
-    "label":"meta",
-    "clas":48
+    "label":"meta"
   },
   {
+    "move":3,
+    "clas":49,
     "name":"R-mark",
-    "move":3,
-    "label":"mark",
-    "clas":49
+    "label":"mark"
   },
   {
+    "move":3,
+    "clas":50,
     "name":"R-pobj||prep",
-    "move":3,
-    "label":"pobj||prep",
-    "clas":50
+    "label":"pobj||prep"
   },
   {
+    "move":3,
+    "clas":51,
     "name":"R-nsubj||ccomp",
-    "move":3,
-    "label":"nsubj||ccomp",
-    "clas":51
+    "label":"nsubj||ccomp"
   },
   {
+    "move":3,
+    "clas":52,
     "name":"R-iobj",
-    "move":3,
-    "label":"iobj",
-    "clas":52
+    "label":"iobj"
   },
   {
+    "move":3,
+    "clas":53,
     "name":"R-poss",
-    "move":3,
-    "label":"poss",
-    "clas":53
+    "label":"poss"
   },
   {
+    "move":3,
+    "clas":54,
     "name":"R-predet",
-    "move":3,
-    "label":"predet",
-    "clas":54
+    "label":"predet"
   },
   {
+    "move":2,
+    "clas":55,
     "name":"L-prep",
-    "move":2,
-    "label":"prep",
-    "clas":55
+    "label":"prep"
   },
   {
+    "move":2,
+    "clas":56,
     "name":"L-det",
-    "move":2,
-    "label":"det",
-    "clas":56
+    "label":"det"
   },
   {
+    "move":2,
+    "clas":57,
     "name":"L-punct",
-    "move":2,
-    "label":"punct",
-    "clas":57
+    "label":"punct"
   },
   {
+    "move":2,
+    "clas":58,
     "name":"L-compound",
-    "move":2,
-    "label":"compound",
-    "clas":58
+    "label":"compound"
   },
   {
+    "move":2,
+    "clas":59,
     "name":"L-amod",
-    "move":2,
-    "label":"amod",
-    "clas":59
+    "label":"amod"
   },
   {
+    "move":2,
+    "clas":60,
     "name":"L-npadvmod",
-    "move":2,
-    "label":"npadvmod",
-    "clas":60
+    "label":"npadvmod"
   },
   {
+    "move":2,
+    "clas":61,
     "name":"L-advmod",
-    "move":2,
-    "label":"advmod",
-    "clas":61
+    "label":"advmod"
   },
   {
+    "move":2,
+    "clas":62,
     "name":"L-nummod",
-    "move":2,
-    "label":"nummod",
-    "clas":62
+    "label":"nummod"
   },
   {
+    "move":2,
+    "clas":63,
     "name":"L-nsubj",
-    "move":2,
-    "label":"nsubj",
-    "clas":63
+    "label":"nsubj"
   },
   {
+    "move":2,
+    "clas":64,
     "name":"L-poss",
-    "move":2,
-    "label":"poss",
-    "clas":64
+    "label":"poss"
   },
   {
+    "move":2,
+    "clas":65,
     "name":"L-aux",
-    "move":2,
-    "label":"aux",
-    "clas":65
+    "label":"aux"
   },
   {
+    "move":2,
+    "clas":66,
     "name":"L-quantmod",
-    "move":2,
-    "label":"quantmod",
-    "clas":66
+    "label":"quantmod"
   },
   {
+    "move":2,
+    "clas":67,
     "name":"L-cc",
-    "move":2,
-    "label":"cc",
-    "clas":67
+    "label":"cc"
   },
   {
+    "move":2,
+    "clas":68,
     "name":"L-dep",
-    "move":2,
-    "label":"dep",
-    "clas":68
+    "label":"dep"
   },
   {
+    "move":2,
+    "clas":69,
     "name":"L-nmod",
-    "move":2,
-    "label":"nmod",
-    "clas":69
+    "label":"nmod"
   },
   {
+    "move":2,
+    "clas":70,
     "name":"L-nsubjpass",
-    "move":2,
-    "label":"nsubjpass",
-    "clas":70
+    "label":"nsubjpass"
   },
   {
+    "move":2,
+    "clas":71,
     "name":"L-dobj",
-    "move":2,
-    "label":"dobj",
-    "clas":71
+    "label":"dobj"
   },
   {
+    "move":2,
+    "clas":72,
     "name":"L-auxpass",
-    "move":2,
-    "label":"auxpass",
-    "clas":72
+    "label":"auxpass"
   },
   {
+    "move":2,
+    "clas":73,
     "name":"L-attr",
-    "move":2,
-    "label":"attr",
-    "clas":73
+    "label":"attr"
   },
   {
+    "move":2,
+    "clas":74,
     "name":"L-mark",
-    "move":2,
-    "label":"mark",
-    "clas":74
+    "label":"mark"
   },
   {
+    "move":2,
+    "clas":75,
     "name":"L-neg",
-    "move":2,
-    "label":"neg",
-    "clas":75
+    "label":"neg"
   },
   {
+    "move":2,
+    "clas":76,
     "name":"L-advcl",
-    "move":2,
-    "label":"advcl",
-    "clas":76
+    "label":"advcl"
   },
   {
+    "move":2,
+    "clas":77,
     "name":"L-predet",
-    "move":2,
-    "label":"predet",
-    "clas":77
+    "label":"predet"
   },
   {
+    "move":2,
+    "clas":78,
     "name":"L-pobj||prep",
-    "move":2,
-    "label":"pobj||prep",
-    "clas":78
+    "label":"pobj||prep"
   },
   {
+    "move":2,
+    "clas":79,
     "name":"L-acomp",
-    "move":2,
-    "label":"acomp",
-    "clas":79
+    "label":"acomp"
   },
   {
+    "move":2,
+    "clas":80,
     "name":"L-ccomp",
-    "move":2,
-    "label":"ccomp",
-    "clas":80
+    "label":"ccomp"
   },
   {
+    "move":2,
+    "clas":81,
     "name":"L-expl",
-    "move":2,
-    "label":"expl",
-    "clas":81
+    "label":"expl"
   },
   {
+    "move":2,
+    "clas":82,
     "name":"L-preconj",
-    "move":2,
-    "label":"preconj",
-    "clas":82
+    "label":"preconj"
   },
   {
+    "move":2,
+    "clas":83,
     "name":"L-csubj",
-    "move":2,
-    "label":"csubj",
-    "clas":83
+    "label":"csubj"
   },
   {
+    "move":2,
+    "clas":84,
     "name":"L-appos||nsubj",
-    "move":2,
-    "label":"appos||nsubj",
-    "clas":84
+    "label":"appos||nsubj"
   },
   {
+    "move":2,
+    "clas":85,
     "name":"L-prep||dobj",
-    "move":2,
-    "label":"prep||dobj",
-    "clas":85
+    "label":"prep||dobj"
   },
   {
+    "move":2,
+    "clas":86,
     "name":"L-parataxis",
-    "move":2,
-    "label":"parataxis",
-    "clas":86
+    "label":"parataxis"
   },
   {
+    "move":2,
+    "clas":87,
     "name":"L-advmod||conj",
-    "move":2,
-    "label":"advmod||conj",
-    "clas":87
+    "label":"advmod||conj"
   },
   {
+    "move":2,
+    "clas":88,
     "name":"L-acl",
-    "move":2,
-    "label":"acl",
-    "clas":88
+    "label":"acl"
   },
   {
+    "move":2,
+    "clas":89,
     "name":"L-prt",
-    "move":2,
-    "label":"prt",
-    "clas":89
+    "label":"prt"
   },
   {
+    "move":2,
+    "clas":90,
     "name":"L-csubjpass",
-    "move":2,
-    "label":"csubjpass",
-    "clas":90
+    "label":"csubjpass"
   },
   {
+    "move":2,
+    "clas":91,
     "name":"L-dobj||xcomp",
-    "move":2,
-    "label":"dobj||xcomp",
-    "clas":91
+    "label":"dobj||xcomp"
   },
   {
+    "move":2,
+    "clas":92,
     "name":"L-case",
-    "move":2,
-    "label":"case",
-    "clas":92
+    "label":"case"
   },
   {
+    "move":2,
+    "clas":93,
     "name":"L-xcomp",
-    "move":2,
-    "label":"xcomp",
-    "clas":93
+    "label":"xcomp"
   },
   {
+    "move":2,
+    "clas":94,
     "name":"L-intj",
-    "move":2,
-    "label":"intj",
-    "clas":94
+    "label":"intj"
   },
   {
+    "move":2,
+    "clas":95,
     "name":"L-advmod||xcomp",
-    "move":2,
-    "label":"advmod||xcomp",
-    "clas":95
+    "label":"advmod||xcomp"
   },
   {
+    "move":2,
+    "clas":96,
     "name":"L-dative",
-    "move":2,
-    "label":"dative",
-    "clas":96
+    "label":"dative"
   },
   {
+    "move":2,
+    "clas":97,
     "name":"L-nsubj||ccomp",
-    "move":2,
-    "label":"nsubj||ccomp",
-    "clas":97
+    "label":"nsubj||ccomp"
   },
   {
+    "move":2,
+    "clas":98,
     "name":"L-meta",
-    "move":2,
-    "label":"meta",
-    "clas":98
+    "label":"meta"
   },
   {
+    "move":2,
+    "clas":99,
     "name":"L-pobj",
-    "move":2,
-    "label":"pobj",
-    "clas":99
+    "label":"pobj"
   },
   {
+    "move":2,
+    "clas":100,
     "name":"L-prep||nsubj",
-    "move":2,
-    "label":"prep||nsubj",
-    "clas":100
+    "label":"prep||nsubj"
   },
   {
+    "move":2,
+    "clas":101,
     "name":"L-oprd",
-    "move":2,
-    "label":"oprd",
-    "clas":101
+    "label":"oprd"
   },
   {
+    "move":2,
+    "clas":102,
     "name":"L-relcl",
-    "move":2,
-    "label":"relcl",
-    "clas":102
+    "label":"relcl"
   },
   {
+    "move":2,
+    "clas":103,
     "name":"L-agent",
-    "move":2,
-    "label":"agent",
-    "clas":103
+    "label":"agent"
   },
   {
+    "move":2,
+    "clas":104,
     "name":"L-appos",
-    "move":2,
-    "label":"appos",
-    "clas":104
+    "label":"appos"
   },
   {
+    "move":2,
+    "clas":105,
     "name":"L-acl||dobj",
-    "move":2,
-    "label":"acl||dobj",
-    "clas":105
+    "label":"acl||dobj"
   },
   {
+    "move":2,
+    "clas":106,
     "name":"L-pcomp",
-    "move":2,
-    "label":"pcomp",
-    "clas":106
+    "label":"pcomp"
   },
   {
+    "move":2,
+    "clas":107,
     "name":"L-relcl||nsubj",
-    "move":2,
-    "label":"relcl||nsubj",
-    "clas":107
+    "label":"relcl||nsubj"
   },
   {
+    "move":2,
+    "clas":108,
     "name":"L-conj",
-    "move":2,
-    "label":"conj",
-    "clas":108
+    "label":"conj"
   },
   {
+    "move":2,
+    "clas":109,
     "name":"L-acl||nsubj",
-    "move":2,
-    "label":"acl||nsubj",
-    "clas":109
+    "label":"acl||nsubj"
   },
   {
-    "name":"B-ROOT",
     "move":4,
-    "label":"ROOT",
-    "clas":110
+    "clas":110,
+    "name":"B-ROOT",
+    "label":"ROOT"
   }
 ]

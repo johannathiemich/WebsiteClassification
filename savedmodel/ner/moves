@@ -1,440 +1,440 @@
 Å´transitions⁄[
   {
+    "move":1,
+    "clas":0,
     "name":"B-NORP",
-    "move":1,
-    "label":"NORP",
-    "clas":0
+    "label":"NORP"
   },
   {
+    "move":1,
+    "clas":1,
     "name":"B-DATE",
-    "move":1,
-    "label":"DATE",
-    "clas":1
+    "label":"DATE"
   },
   {
+    "move":1,
+    "clas":2,
     "name":"B-CARDINAL",
-    "move":1,
-    "label":"CARDINAL",
-    "clas":2
+    "label":"CARDINAL"
   },
   {
+    "move":1,
+    "clas":3,
     "name":"B-GPE",
-    "move":1,
-    "label":"GPE",
-    "clas":3
+    "label":"GPE"
   },
   {
+    "move":1,
+    "clas":4,
     "name":"B-FAC",
-    "move":1,
-    "label":"FAC",
-    "clas":4
+    "label":"FAC"
   },
   {
+    "move":1,
+    "clas":5,
     "name":"B-PERCENT",
-    "move":1,
-    "label":"PERCENT",
-    "clas":5
+    "label":"PERCENT"
   },
   {
+    "move":1,
+    "clas":6,
     "name":"B-ORG",
-    "move":1,
-    "label":"ORG",
-    "clas":6
+    "label":"ORG"
   },
   {
+    "move":1,
+    "clas":7,
     "name":"B-TIME",
-    "move":1,
-    "label":"TIME",
-    "clas":7
+    "label":"TIME"
   },
   {
+    "move":1,
+    "clas":8,
     "name":"B-PERSON",
-    "move":1,
-    "label":"PERSON",
-    "clas":8
+    "label":"PERSON"
   },
   {
+    "move":1,
+    "clas":9,
     "name":"B-WORK_OF_ART",
-    "move":1,
-    "label":"WORK_OF_ART",
-    "clas":9
+    "label":"WORK_OF_ART"
   },
   {
+    "move":1,
+    "clas":10,
     "name":"B-ORDINAL",
-    "move":1,
-    "label":"ORDINAL",
-    "clas":10
+    "label":"ORDINAL"
   },
   {
+    "move":1,
+    "clas":11,
     "name":"B-LANGUAGE",
-    "move":1,
-    "label":"LANGUAGE",
-    "clas":11
+    "label":"LANGUAGE"
   },
   {
+    "move":1,
+    "clas":12,
     "name":"B-QUANTITY",
-    "move":1,
-    "label":"QUANTITY",
-    "clas":12
+    "label":"QUANTITY"
   },
   {
+    "move":1,
+    "clas":13,
     "name":"B-LOC",
-    "move":1,
-    "label":"LOC",
-    "clas":13
+    "label":"LOC"
   },
   {
+    "move":1,
+    "clas":14,
     "name":"B-EVENT",
-    "move":1,
-    "label":"EVENT",
-    "clas":14
+    "label":"EVENT"
   },
   {
+    "move":1,
+    "clas":15,
     "name":"B-MONEY",
-    "move":1,
-    "label":"MONEY",
-    "clas":15
+    "label":"MONEY"
   },
   {
+    "move":1,
+    "clas":16,
     "name":"B-PRODUCT",
-    "move":1,
-    "label":"PRODUCT",
-    "clas":16
+    "label":"PRODUCT"
   },
   {
+    "move":1,
+    "clas":17,
     "name":"B-LAW",
-    "move":1,
-    "label":"LAW",
-    "clas":17
+    "label":"LAW"
   },
   {
+    "move":2,
+    "clas":18,
     "name":"I-NORP",
-    "move":2,
-    "label":"NORP",
-    "clas":18
+    "label":"NORP"
   },
   {
+    "move":2,
+    "clas":19,
     "name":"I-DATE",
-    "move":2,
-    "label":"DATE",
-    "clas":19
+    "label":"DATE"
   },
   {
+    "move":2,
+    "clas":20,
     "name":"I-CARDINAL",
-    "move":2,
-    "label":"CARDINAL",
-    "clas":20
+    "label":"CARDINAL"
   },
   {
+    "move":2,
+    "clas":21,
     "name":"I-GPE",
-    "move":2,
-    "label":"GPE",
-    "clas":21
+    "label":"GPE"
   },
   {
+    "move":2,
+    "clas":22,
     "name":"I-FAC",
-    "move":2,
-    "label":"FAC",
-    "clas":22
+    "label":"FAC"
   },
   {
+    "move":2,
+    "clas":23,
     "name":"I-PERCENT",
-    "move":2,
-    "label":"PERCENT",
-    "clas":23
+    "label":"PERCENT"
   },
   {
+    "move":2,
+    "clas":24,
     "name":"I-ORG",
-    "move":2,
-    "label":"ORG",
-    "clas":24
+    "label":"ORG"
   },
   {
+    "move":2,
+    "clas":25,
     "name":"I-TIME",
-    "move":2,
-    "label":"TIME",
-    "clas":25
+    "label":"TIME"
   },
   {
+    "move":2,
+    "clas":26,
     "name":"I-PERSON",
-    "move":2,
-    "label":"PERSON",
-    "clas":26
+    "label":"PERSON"
   },
   {
+    "move":2,
+    "clas":27,
     "name":"I-WORK_OF_ART",
-    "move":2,
-    "label":"WORK_OF_ART",
-    "clas":27
+    "label":"WORK_OF_ART"
   },
   {
+    "move":2,
+    "clas":28,
     "name":"I-ORDINAL",
-    "move":2,
-    "label":"ORDINAL",
-    "clas":28
+    "label":"ORDINAL"
   },
   {
+    "move":2,
+    "clas":29,
     "name":"I-LANGUAGE",
-    "move":2,
-    "label":"LANGUAGE",
-    "clas":29
+    "label":"LANGUAGE"
   },
   {
+    "move":2,
+    "clas":30,
     "name":"I-QUANTITY",
-    "move":2,
-    "label":"QUANTITY",
-    "clas":30
+    "label":"QUANTITY"
   },
   {
+    "move":2,
+    "clas":31,
     "name":"I-LOC",
-    "move":2,
-    "label":"LOC",
-    "clas":31
+    "label":"LOC"
   },
   {
+    "move":2,
+    "clas":32,
     "name":"I-EVENT",
-    "move":2,
-    "label":"EVENT",
-    "clas":32
+    "label":"EVENT"
   },
   {
+    "move":2,
+    "clas":33,
     "name":"I-MONEY",
-    "move":2,
-    "label":"MONEY",
-    "clas":33
+    "label":"MONEY"
   },
   {
+    "move":2,
+    "clas":34,
     "name":"I-PRODUCT",
-    "move":2,
-    "label":"PRODUCT",
-    "clas":34
+    "label":"PRODUCT"
   },
   {
+    "move":2,
+    "clas":35,
     "name":"I-LAW",
-    "move":2,
-    "label":"LAW",
-    "clas":35
+    "label":"LAW"
   },
   {
+    "move":3,
+    "clas":36,
     "name":"L-NORP",
-    "move":3,
-    "label":"NORP",
-    "clas":36
+    "label":"NORP"
   },
   {
+    "move":3,
+    "clas":37,
     "name":"L-DATE",
-    "move":3,
-    "label":"DATE",
-    "clas":37
+    "label":"DATE"
   },
   {
+    "move":3,
+    "clas":38,
     "name":"L-CARDINAL",
-    "move":3,
-    "label":"CARDINAL",
-    "clas":38
+    "label":"CARDINAL"
   },
   {
+    "move":3,
+    "clas":39,
     "name":"L-GPE",
-    "move":3,
-    "label":"GPE",
-    "clas":39
+    "label":"GPE"
   },
   {
+    "move":3,
+    "clas":40,
     "name":"L-FAC",
-    "move":3,
-    "label":"FAC",
-    "clas":40
+    "label":"FAC"
   },
   {
+    "move":3,
+    "clas":41,
     "name":"L-PERCENT",
-    "move":3,
-    "label":"PERCENT",
-    "clas":41
+    "label":"PERCENT"
   },
   {
+    "move":3,
+    "clas":42,
     "name":"L-ORG",
-    "move":3,
-    "label":"ORG",
-    "clas":42
+    "label":"ORG"
   },
   {
+    "move":3,
+    "clas":43,
     "name":"L-TIME",
-    "move":3,
-    "label":"TIME",
-    "clas":43
+    "label":"TIME"
   },
   {
+    "move":3,
+    "clas":44,
     "name":"L-PERSON",
-    "move":3,
-    "label":"PERSON",
-    "clas":44
+    "label":"PERSON"
   },
   {
+    "move":3,
+    "clas":45,
     "name":"L-WORK_OF_ART",
-    "move":3,
-    "label":"WORK_OF_ART",
-    "clas":45
+    "label":"WORK_OF_ART"
   },
   {
+    "move":3,
+    "clas":46,
     "name":"L-ORDINAL",
-    "move":3,
-    "label":"ORDINAL",
-    "clas":46
+    "label":"ORDINAL"
   },
   {
+    "move":3,
+    "clas":47,
     "name":"L-LANGUAGE",
-    "move":3,
-    "label":"LANGUAGE",
-    "clas":47
+    "label":"LANGUAGE"
   },
   {
+    "move":3,
+    "clas":48,
     "name":"L-QUANTITY",
-    "move":3,
-    "label":"QUANTITY",
-    "clas":48
+    "label":"QUANTITY"
   },
   {
+    "move":3,
+    "clas":49,
     "name":"L-LOC",
-    "move":3,
-    "label":"LOC",
-    "clas":49
+    "label":"LOC"
   },
   {
+    "move":3,
+    "clas":50,
     "name":"L-EVENT",
-    "move":3,
-    "label":"EVENT",
-    "clas":50
+    "label":"EVENT"
   },
   {
+    "move":3,
+    "clas":51,
     "name":"L-MONEY",
-    "move":3,
-    "label":"MONEY",
-    "clas":51
+    "label":"MONEY"
   },
   {
+    "move":3,
+    "clas":52,
     "name":"L-PRODUCT",
-    "move":3,
-    "label":"PRODUCT",
-    "clas":52
+    "label":"PRODUCT"
   },
   {
+    "move":3,
+    "clas":53,
     "name":"L-LAW",
-    "move":3,
-    "label":"LAW",
-    "clas":53
+    "label":"LAW"
   },
   {
+    "move":4,
+    "clas":54,
     "name":"U-NORP",
-    "move":4,
-    "label":"NORP",
-    "clas":54
+    "label":"NORP"
   },
   {
+    "move":4,
+    "clas":55,
     "name":"U-DATE",
-    "move":4,
-    "label":"DATE",
-    "clas":55
+    "label":"DATE"
   },
   {
+    "move":4,
+    "clas":56,
     "name":"U-CARDINAL",
-    "move":4,
-    "label":"CARDINAL",
-    "clas":56
+    "label":"CARDINAL"
   },
   {
+    "move":4,
+    "clas":57,
     "name":"U-GPE",
-    "move":4,
-    "label":"GPE",
-    "clas":57
+    "label":"GPE"
   },
   {
+    "move":4,
+    "clas":58,
     "name":"U-FAC",
-    "move":4,
-    "label":"FAC",
-    "clas":58
+    "label":"FAC"
   },
   {
+    "move":4,
+    "clas":59,
     "name":"U-PERCENT",
-    "move":4,
-    "label":"PERCENT",
-    "clas":59
+    "label":"PERCENT"
   },
   {
+    "move":4,
+    "clas":60,
     "name":"U-ORG",
-    "move":4,
-    "label":"ORG",
-    "clas":60
+    "label":"ORG"
   },
   {
+    "move":4,
+    "clas":61,
     "name":"U-TIME",
-    "move":4,
-    "label":"TIME",
-    "clas":61
+    "label":"TIME"
   },
   {
+    "move":4,
+    "clas":62,
     "name":"U-PERSON",
-    "move":4,
-    "label":"PERSON",
-    "clas":62
+    "label":"PERSON"
   },
   {
+    "move":4,
+    "clas":63,
     "name":"U-WORK_OF_ART",
-    "move":4,
-    "label":"WORK_OF_ART",
-    "clas":63
+    "label":"WORK_OF_ART"
   },
   {
+    "move":4,
+    "clas":64,
     "name":"U-ORDINAL",
-    "move":4,
-    "label":"ORDINAL",
-    "clas":64
+    "label":"ORDINAL"
   },
   {
+    "move":4,
+    "clas":65,
     "name":"U-LANGUAGE",
-    "move":4,
-    "label":"LANGUAGE",
-    "clas":65
+    "label":"LANGUAGE"
   },
   {
+    "move":4,
+    "clas":66,
     "name":"U-QUANTITY",
-    "move":4,
-    "label":"QUANTITY",
-    "clas":66
+    "label":"QUANTITY"
   },
   {
+    "move":4,
+    "clas":67,
     "name":"U-LOC",
-    "move":4,
-    "label":"LOC",
-    "clas":67
+    "label":"LOC"
   },
   {
+    "move":4,
+    "clas":68,
     "name":"U-EVENT",
-    "move":4,
-    "label":"EVENT",
-    "clas":68
+    "label":"EVENT"
   },
   {
+    "move":4,
+    "clas":69,
     "name":"U-MONEY",
-    "move":4,
-    "label":"MONEY",
-    "clas":69
+    "label":"MONEY"
   },
   {
+    "move":4,
+    "clas":70,
     "name":"U-PRODUCT",
-    "move":4,
-    "label":"PRODUCT",
-    "clas":70
+    "label":"PRODUCT"
   },
   {
+    "move":4,
+    "clas":71,
     "name":"U-LAW",
-    "move":4,
-    "label":"LAW",
-    "clas":71
+    "label":"LAW"
   },
   {
-    "name":"O",
     "move":5,
-    "label":"",
-    "clas":72
+    "clas":72,
+    "name":"O",
+    "label":""
   }
 ]

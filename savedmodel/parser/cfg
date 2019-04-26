@@ -1,17 +1,17 @@
 {
-  "beam_density":0.0,
-  "nr_class":111,
-  "hidden_depth":1,
-  "maxout_pieces":2,
-  "hist_size":0,
   "hidden_width":200,
+  "beam_width":1,
+  "token_vector_width":128,
+  "hist_size":0,
+  "pretrained_dims":300,
+  "nr_class":111,
+  "maxout_pieces":2,
+  "hist_width":0,
+  "hidden_depth":1,
+  "pretrained_vectors":"en_core_web_md.vectors",
+  "beam_density":0.0,
+  "cnn_maxout_pieces":3,
   "deprecation_fixes":{
     "vectors_name":"en_core_web_md.vectors"
-  },
-  "pretrained_dims":300,
-  "pretrained_vectors":"en_core_web_md.vectors",
-  "beam_width":1,
-  "cnn_maxout_pieces":3,
-  "hist_width":0,
-  "token_vector_width":128
+  }
 }
