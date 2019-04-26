@@ -4,25 +4,40 @@ import numpy as np
 import pandas as pd
 from sklearn.decomposition import PCA
 import spacy
-import pylab as pl
+import matplotlib.pylab as pl
 
 csv_path_cleaned = 'files/data_cleaned.txt'
 df = pd.read_csv(csv_path_cleaned, header = None, names = ['Category', 'Text'], sep =' ')
 X = df['Text']
 y = df['Category']
-#path_sent_embeddings = "spacy_sent_embeddings_all_data.csv"
-#sent_embeddings = []
-#with open(path_sent_embeddings) as csvfile:
+
+# path_sent_embeddings = "spacy_sent_embeddings_all_data.csv"
+# sent_embeddings = []
+# with open(path_sent_embeddings) as csvfile:
 #    readCSV = csv.reader(csvfile, delimiter=' ')
 #    for row in readCSV:
+#
+#        sent_embeddings.append([row])
 
- #       sent_embeddings.append([row])
+# sentence_embeddings = []
+# for row in X:
+#     sentence_embeddings.append(nlp(row).vector)
 
-#sent_embeddings = sent_embeddings[:10]
-nlp = spacy.load('en_core_web_lg')
-sentence_embeddings = []
-for row in X:
-    sentence_embeddings.append(nlp(row).vector)
+# According to their documentations, this will work faster for large size corpus
+
+def get_embeddings(path='doc_embeddings.npy'):
+    return np.load(path)
+
+def generate_embeddings():
+    nlp = spacy.load('en_core_web_lg')
+    docs = list(nlp.pipe(X))
+    return [doc.vector for doc in docs]
+
+
+sentence_embeddings = get_embeddings()
+sentence_embeddings = sentence_embeddings[:10]
+
+
 
 #print("X shape: ", X.shape[0])
 pca = PCA(n_components=10, svd_solver='auto')
@@ -50,8 +65,6 @@ pl.legend([c1, c2, c3, c4], ['Sports', 'Food&Drink',
 pl.title('Website classification embeddings visualization')
 pl.show()
 #visualisation
-
-
 
 
 
