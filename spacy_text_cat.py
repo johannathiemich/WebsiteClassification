@@ -116,11 +116,12 @@ if __name__ == '__main__':
     nlp = train_model(nlp, n_iter, save=save_my_model, output_dir=output_dir)
 
     # Test on one example
-    test_doc = X_test[0]
+    test_doc = X_test.values[0]
     doc = nlp(test_doc)
     print(test_doc, doc.cats)
 
     # Get Accuracy
+    textcat = nlp.get_pipe('textcat')
     accuracy = evaluate(nlp.tokenizer, textcat, X_test, y_test)
     print('Accuracy: {accuracy}'.format(accuracy=accuracy))
 
