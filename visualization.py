@@ -60,6 +60,3 @@ if __name__ == '__main__':
             + ggtitle("Website Classification Embeddings Visualization")
 
     ggplot.save(chart, 'visual.png')
-
-
-

@@ -34,15 +34,14 @@ def evaluate(tokenizer, textcat, texts, cats):
     import operator
     docs = (tokenizer(text) for text in texts)
     acc = 0
-    wrong_indices = []
+    good_indices = [False] * len(texts)
     for i, doc in enumerate(textcat.pipe(docs)):
         gold = cats[i]
         prediction = max(doc.cats.items(), key=operator.itemgetter(1))[0]
         if gold == prediction:
             acc += 1
-        else:
-            wrong_indices.append(i)
-    return acc / len(texts), wrong_indices
+            good_indices[i] = True
+    return acc / len(texts), good_indices
 
 def split(df, percentage= 0.8):
     msk = random.rand(len(df)) < percentage

@@ -1,4 +1,5 @@
 from spacy_text_cat import *
+from numpy import logical_not
 
 # Load in data
 csv_path_cleaned = 'files/data_cleaned.txt'
@@ -16,4 +17,11 @@ if load_my_model:
 
 # Get Accuracy
 accuracy = evaluate(nlp.tokenizer, nlp.get_pipe('textcat'), X_test.values, y_test.values)
-print('Accuracy: {accuracy}'.format(accuracy=accuracy))
+print('Accuracy: {accuracy}'.format(accuracy=accuracy[0]))
+
+
+y_test = y_test.str.replace("__label__", "")
+
+good_ones = y_test[accuracy[1]]
+bad_ones = y_test[logical_not(accuracy[1])]
+metric = good_ones.value_counts() / y_test.value_counts()
