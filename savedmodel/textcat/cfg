@@ -1,0 +1,11 @@
+{
+  "pretrained_vectors":"en_core_web_md.vectors",
+  "exclusive_classes":true,
+  "architecture":"simple_cnn",
+  "labels":[
+    "__label__sports",
+    "__label__travel",
+    "__label__games&toys",
+    "__label__food&drink"
+  ]
+}
