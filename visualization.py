@@ -5,6 +5,7 @@ import spacy
 import matplotlib.pylab as pl
 from sklearn.manifold import TSNE
 from ggplot import *
+import feather
 
 
 def get_embeddings(path='doc_embeddings.npy'):
@@ -31,6 +32,10 @@ def plot_matplot(X, y, df):
     pl.title('Website classification embeddings visualization')
     pl.show()
 
+def save_to_r(df, cols, path ='my_data.feather'):
+    feather.write_dataframe(df[cols], path)
+
+
 
 if __name__ == '__main__':
 
@@ -55,3 +60,6 @@ if __name__ == '__main__':
             + ggtitle("Website Classification Embeddings Visualization")
 
     ggplot.save(chart, 'visual.png')
+
+
+
