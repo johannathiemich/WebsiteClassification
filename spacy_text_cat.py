@@ -22,10 +22,10 @@ def get_text_label(df):
 def save_model(nlp, optimizer, output_dir = 'savedmodel'):
     with nlp.use_params(optimizer.averages):
         nlp.to_disk(output_dir)
-    print("Saved model to", output_dir)
+    print("Saved model to ", output_dir)
 
 def load_model(output_dir):
-    print("Loading from", output_dir)
+    print("Loading from ", output_dir)
     nlp = spacy.load(output_dir)
     return nlp
 
