@@ -133,6 +133,9 @@ model.compile(loss='categorical_crossentropy',
 
 
 history = model.fit(x_train, y_train,
-          batch_size=32,
-          epochs=1,
+          batch_size=64,
+          epochs=20,
           validation_data=(x_val, y_val))
+
+model.save('model_keras.h5')
+model.save_weights('model_weights.h5')
