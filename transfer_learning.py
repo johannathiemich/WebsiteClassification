@@ -6,10 +6,12 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.utils import to_categorical
 from keras.layers import Dense, Input, GlobalMaxPooling1D
-from keras.layers import Conv1D, MaxPooling1D, Embedding
+from keras.layers import Conv1D, MaxPooling1D, Embedding, Dropout
 from keras.models import Model
 from keras.initializers import Constant
 from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+
 
 
 # https://github.com/keras-team/keras/blob/master/examples/pretrained_word_embeddings.py
@@ -114,6 +116,7 @@ embedding_layer = Embedding(num_words,
 print('Training model.')
 
 # train a 1D convnet with global maxpooling
+dropout = 0.5
 sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
 embedded_sequences = embedding_layer(sequence_input)
 x = Conv1D(128, 5, activation='relu')(embedded_sequences)
@@ -122,6 +125,7 @@ x = Conv1D(128, 5, activation='relu')(x)
 x = MaxPooling1D(5)(x)
 x = Conv1D(128, 5, activation='relu')(x)
 x = GlobalMaxPooling1D()(x)
+x = Dropout(dropout)(x)
 x = Dense(128, activation='relu')(x)
 preds = Dense(len(labels_index), activation='softmax')(x)
 
@@ -130,12 +134,21 @@ model.compile(loss='categorical_crossentropy',
               optimizer='rmsprop',
               metrics=['acc'])
 
-
+print(model.summary())
 
 history = model.fit(x_train, y_train,
           batch_size=64,
-          epochs=20,
+          epochs=8,
           validation_data=(x_val, y_val))
 
-model.save('model_keras.h5')
-model.save_weights('model_weights.h5')
+model.save('model_keras2.h5')
+model.save_weights('model_weights2.h5')
+
+
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.show()
+
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.show()
