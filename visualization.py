@@ -1,4 +1,4 @@
-#By Alejandro Robles
+#By Alejandro Robles and Johanna Thiemich
 #Using transfer learning to train model
 import numpy as np
 import pandas as pd

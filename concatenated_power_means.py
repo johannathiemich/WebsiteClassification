@@ -1,4 +1,4 @@
-import tensorflow as tf
+#An approach that we did not end up using. Just leaving it in here for future work
 import tensorflow_hub as hub
 import pandas as pd
 

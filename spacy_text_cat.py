@@ -1,5 +1,5 @@
 #By Alejandro Robles
-#Training an CNN for text classification
+#Training spacy's CNN model from scratch for text classification
 
 
 import pandas as pd

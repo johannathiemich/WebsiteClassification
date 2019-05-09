@@ -1,5 +1,5 @@
 #By Johanna Thiemich
-#Training an SVM on our data
+#Training an SVM on TF-IDF vectors
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
