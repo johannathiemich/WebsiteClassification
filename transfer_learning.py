@@ -1,20 +1,22 @@
+#By Alejandro Robles
+#Training an CNN for text classification
 import os
-import sys
 import numpy as np
 import pandas as pd
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.utils import to_categorical
 from keras.layers import Dense, Input, GlobalMaxPooling1D
-from keras.layers import Conv1D, MaxPooling1D, Embedding, Dropout
+from keras.layers import Conv1D, MaxPooling1D, Embedding, Dropout, BatchNormalization
 from keras.models import Model
 from keras.initializers import Constant
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
+from keras.losses import *
 
 
 
-# https://github.com/keras-team/keras/blob/master/examples/pretrained_word_embeddings.py
+# The model was trained in in google colab, using a gpu
 
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
@@ -115,18 +117,24 @@ embedding_layer = Embedding(num_words,
 
 print('Training model.')
 
+x = None
+preds = None
+model = None
+sequence_input = None
+embedded_sequences = None
 # train a 1D convnet with global maxpooling
-dropout = 0.5
+dropout = 0.30
 sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
 embedded_sequences = embedding_layer(sequence_input)
 x = Conv1D(128, 5, activation='relu')(embedded_sequences)
 x = MaxPooling1D(5)(x)
 x = Conv1D(128, 5, activation='relu')(x)
 x = MaxPooling1D(5)(x)
+#x = BatchNormalization()(x)
 x = Conv1D(128, 5, activation='relu')(x)
 x = GlobalMaxPooling1D()(x)
-x = Dropout(dropout)(x)
 x = Dense(128, activation='relu')(x)
+x = Dropout(dropout)(x)
 preds = Dense(len(labels_index), activation='softmax')(x)
 
 model = Model(sequence_input, preds)
@@ -137,8 +145,8 @@ model.compile(loss='categorical_crossentropy',
 print(model.summary())
 
 history = model.fit(x_train, y_train,
-          batch_size=64,
-          epochs=8,
+          batch_size=512,
+          epochs=20,
           validation_data=(x_val, y_val))
 
 model.save('model_keras2.h5')
@@ -152,3 +160,6 @@ plt.show()
 plt.plot(history.history['acc'])
 plt.plot(history.history['val_acc'])
 plt.show()
+
+
+# Code inspired by this blog: https://blog.keras.io/using-pre-trained-word-embeddings-in-a-keras-model.html
