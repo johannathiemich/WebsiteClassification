@@ -1,0 +1,70 @@
+#By Johanna Thiemich
+#Using spacy's sentence embeddings as input to train a SVM
+
+from sklearn.preprocessing import StandardScaler
+import pandas as pd
+import spacy
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.linear_model import SGDClassifier
+import pickle
+
+def load_data(path='files/data_cleaned.txt'):
+    df = pd.read_csv(path, header = None, names = ['Category', 'Text'], sep =' ')
+    X = df['Text']
+    y = df['Category']
+    #X = X[:100]
+    #y = y[:100]
+    return X, y
+
+def generate_embeddings(X):
+    nlp = spacy.load('en_core_web_lg')
+    docs = list(nlp.pipe(X))
+    return [doc.vector for doc in docs]
+
+def create_embeddings(X, path_model='en_core_web_lg'):
+    nlp = spacy.load(path_model)
+    sentence_embeddings = []
+    for row in X:
+        sentence_embeddings.append(nlp(row).vector)
+    return sentence_embeddings
+
+def split_dataset(X_input, y_input):
+    return train_test_split(sentence_embeddings, y, test_size=0.3, random_state=42)
+
+def train_model(X_input, y_input, test_size=0.3):
+    classifier = SGDClassifier(loss = "hinge", penalty="l2", max_iter = 100, shuffle=True)
+    classifier.fit(X_input ,y_input)
+    return classifier
+
+def normalize_data(X_train, X_test):
+    scaler = StandardScaler()
+    scaler.fit(X_train)  # Don't cheat - fit only on training data
+    X_train_new = scaler.transform(X_train)
+    X_test_new = scaler.transform(X_test)  # apply same transformation to test data
+    return X_train_new, X_test_new
+
+def calc_accuracy(classifier, X_test, y_test):
+    y_pred = classifier.predict(X_test)
+    print('accuracy %s' % accuracy_score(y_pred, y_test))
+    print("report linear model", classification_report(y_test, y_pred, target_names=classifier.classes_))
+    return accuracy_score(y_pred, y_test)
+
+def save_model(model, path):
+    with open(path, 'wb') as file:
+        pickle.dump(model, file)
+
+if __name__ == '__main__':
+    csv_path_cleaned = 'files/data_cleaned.txt'
+    X, y = load_data(csv_path_cleaned)
+
+    path_model = 'en_core_web_lg'
+    sentence_embeddings = create_embeddings(X)
+    sentence_embeddings.to_pickle(path="sentence_embeddings.pkl")
+    X_train, X_test, y_train, y_test = split_dataset(sentence_embeddings, y)
+    X_train_new, X_test_new = normalize_data(X_train, X_test)
+    model = train_model(X_train_new, y_train)
+
+    accuracy=calc_accuracy(model, X_test_new, y_test)
+    save_model(model, path='files/SVM_spacy_embeddings.pkl')
+
