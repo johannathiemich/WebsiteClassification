@@ -1,3 +1,6 @@
+#By Alejandro Robles
+#Playing with spacy modules
+
 from spacy_text_cat import *
 from numpy import logical_not
 

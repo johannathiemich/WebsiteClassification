@@ -28,6 +28,7 @@ wheels/
 *.pkl
 *.bin
 *.vec
+**/glove.6B
 MANIFEST
 
 # PyInstaller

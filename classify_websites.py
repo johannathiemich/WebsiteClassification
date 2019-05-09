@@ -1,3 +1,5 @@
+#By Alejandro Robles
+#Training an CNN for text classification
 #this file will contain training the model and testing its results
 from pandas import read_pickle
 import fasttext
