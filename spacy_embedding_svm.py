@@ -60,6 +60,7 @@ if __name__ == '__main__':
 
     path_model = 'en_core_web_lg'
     sentence_embeddings = create_embeddings(X)
+    sentence_embeddings.to_pickle(path="sentence_embeddings.pkl")
     X_train, X_test, y_train, y_test = split_dataset(sentence_embeddings, y)
     X_train_new, X_test_new = normalize_data(X_train, X_test)
     model = train_model(X_train_new, y_train)

@@ -25,7 +25,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 sgd_linear = Pipeline((('vect', CountVectorizer()),
                        ('tfidf', TfidfTransformer()),
                        ('clf',
-                        SGDClassifier(loss='hinge', penalty='l2', alpha=1e-3, random_state=42, max_iter=20, tol=1e-3,
+                        SGDClassifier(loss='hinge', penalty='l2', alpha=1e-4, random_state=42, max_iter=100, tol=1e-3
                         ))))
 
 #train the model
